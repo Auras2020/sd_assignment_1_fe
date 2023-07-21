@@ -1,0 +1,57 @@
+<div [formGroup]="form">
+  <h1 mat-dialog-title class="dialog-title">{{title}}</h1>
+
+  <div>
+    <div>
+      <div>
+        <label class="name-label" [ngClass]="{'asterisk': nameControl.hasError('required')}">Name</label>
+      </div>
+      <div>
+        <mat-form-field appearance="outline" class="mat-form">
+          <input matInput formControlName="name">
+        </mat-form-field>
+        <div
+          *ngIf="nameControl.touched && nameControl.hasError('required')" class="error">
+          Name is required!
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div>
+        <label class="name-label" [ngClass]="{'asterisk': emailControl.hasError('required')}">Email</label>
+      </div>
+      <div>
+        <mat-form-field appearance="outline" class="mat-form">
+          <input matInput formControlName="email">
+        </mat-form-field>
+        <div
+          *ngIf="nameControl.touched && emailControl.hasError('required')" class="error">
+          Email is required!
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div>
+        <label class="name-label" [ngClass]="{'asterisk': roleControl.hasError('required')}">Role</label>
+      </div>
+      <div>
+        <mat-form-field appearance="outline" class="mat-form">
+          <mat-select formControlName="role">
+            <mat-option *ngFor="let role of roles" [value]="role">{{role}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div
+          *ngIf="roleControl.touched && roleControl.hasError('required')" class="error">
+          Role is required!
+        </div>
+      </div>
+    </div>
+
+    <div mat-dialog-actions align="end">
+      <button mat-button mat-dialog-close class="cancel-button">Cancel</button>
+      <button type="submit" [disabled]="!form.valid" mat-raised-button (click)="saveUser()" class="save-user-button">Save</button>
+    </div>
+  </div>
+</div>

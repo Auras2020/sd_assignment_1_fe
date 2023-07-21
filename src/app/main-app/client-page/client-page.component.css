@@ -1,0 +1,13 @@
+mat-toolbar {
+  height: 80px;
+  position: relative;
+  background-color: #839DC3;
+  margin-bottom: 50px;
+  justify-content: center;
+  align-content: center;
+}
+
+.title{
+  color: white;
+  font-weight: bold;
+}

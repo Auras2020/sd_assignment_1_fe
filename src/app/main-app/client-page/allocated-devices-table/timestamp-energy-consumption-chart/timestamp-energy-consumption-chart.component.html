@@ -1,0 +1,43 @@
+<div [formGroup]="form">
+  <h1 mat-dialog-title class="dialog-title">Daily energy consumption chart</h1>
+
+  <div>
+    <div class="name-label">
+      Device: {{this.name}}
+    </div>
+
+    <div>
+      <div>
+        <label class="date-label">Select date:</label>
+      </div>
+      <div>
+        <mat-form-field appearance="outline" class="mat-form">
+          <input matInput [matDatepicker]="picker" formControlName="timestamp" (dateChange)="findEnergiesForDevice()">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker ></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div>
+      <ngx-charts-bar-vertical
+        [view]="[700, 400]"
+        [results]="data"
+        [gradient]="gradient"
+        [xAxis]="showXAxis"
+        [yAxis]="showYAxis"
+        [legend]="showLegend"
+        [showXAxisLabel]="showXAxisLabel"
+        [showYAxisLabel]="showYAxisLabel"
+        [xAxisLabel]="xAxisLabel"
+        [yAxisLabel]="yAxisLabel">
+      </ngx-charts-bar-vertical>
+    </div>
+
+    <div mat-dialog-actions align="end">
+      <button mat-button mat-dialog-close class="cancel-button">Cancel</button>
+    </div>
+
+  </div>
+
+</div>

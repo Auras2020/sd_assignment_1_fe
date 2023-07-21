@@ -1,0 +1,69 @@
+<div [formGroup]="form">
+  <h1 mat-dialog-title class="dialog-title">{{title}}</h1>
+
+  <div>
+    <div>
+      <div>
+        <label class="name-label" [ngClass]="{'asterisk': nameControl.hasError('required')}">Name</label>
+      </div>
+      <div>
+        <mat-form-field appearance="outline" class="mat-form">
+          <input matInput formControlName="name">
+        </mat-form-field>
+        <div
+          *ngIf="nameControl.touched && nameControl.hasError('required')" class="error">
+          Name is required!
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div>
+        <label class="name-label">Description</label>
+      </div>
+      <div>
+        <mat-form-field appearance="outline" class="mat-form">
+          <input matInput formControlName="description">
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div>
+      <div>
+        <label class="name-label" [ngClass]="{'asterisk': addressControl.hasError('required')}">Address</label>
+      </div>
+      <div>
+        <mat-form-field appearance="outline" class="mat-form">
+          <input matInput formControlName="address">
+        </mat-form-field>
+        <div
+          *ngIf="addressControl.touched && addressControl.hasError('required')" class="error">
+          Address is required!
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div>
+        <label class="name-label" [ngClass]="{'asterisk': addressControl.hasError('required')}">Maximum hourly energy consumption</label>
+      </div>
+      <div>
+        <mat-form-field appearance="outline" class="mat-form">
+          <input matInput formControlName="maximumHourlyEnergyConsumption" type="number">
+        </mat-form-field>
+        <div
+          *ngIf="maximumHourlyEnergyConsumptionControl.touched && maximumHourlyEnergyConsumptionControl.hasError('required')" class="error">
+          Maximum hourly energy consumption is required!
+        </div>
+        <div *ngIf="maximumHourlyEnergyConsumptionControl.hasError('min')" class="error">
+          Maximum hourly energy consumption is a positive and bigger than zero number!
+        </div>
+      </div>
+    </div>
+
+    <div mat-dialog-actions align="end">
+      <button mat-button mat-dialog-close class="cancel-button">Cancel</button>
+      <button type="submit" [disabled]="!form.valid" mat-raised-button (click)="saveDevice()" class="save-device-button">Save</button>
+    </div>
+  </div>
+</div>

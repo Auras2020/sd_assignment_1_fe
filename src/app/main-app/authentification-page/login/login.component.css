@@ -1,0 +1,42 @@
+.dialog-title {
+  color: #00133F;
+}
+
+.mat-dialog-title {
+  border-bottom: 2px solid #839DC3
+}
+
+.mat-form {
+  width: 300px;
+}
+
+.username-label, .password-label {
+  color: #3E5F8D;
+  font-weight: 500;
+}
+
+.error{
+  margin-top: -20px;
+  margin-bottom: 10px;
+  color: red
+}
+
+.submit-button {
+  background-color: #F55A30;
+  color: #FFFFFF;
+  width: 125px;
+}
+
+.message-style{
+  padding-left: 10px;
+}
+
+.register{
+  color: deeppink;
+}
+
+.register-padding{
+  padding-top: 10px;
+}
+
+

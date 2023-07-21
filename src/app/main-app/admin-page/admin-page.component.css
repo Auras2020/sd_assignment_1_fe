@@ -1,0 +1,39 @@
+mat-toolbar {
+  height: 80px;
+  position: relative;
+  background-color: #839DC3;
+  margin-bottom: 50px;
+  justify-content: center;
+  align-content: center;
+}
+
+.btn-default {
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 100%;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border-width: 0;
+  background-color: #839DC3;
+  border-radius: 0;
+}
+
+.btn-default:hover {
+  border-bottom: 3px solid white;
+  border-radius: 0;
+}
+
+.btn-selected {
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 100%;
+  border-width: 0;
+  border-bottom: 4px solid white;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: #839DC3;
+  border-radius: 0;
+}
+

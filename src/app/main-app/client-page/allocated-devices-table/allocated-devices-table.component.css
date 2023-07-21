@@ -1,0 +1,40 @@
+.device-table {
+  min-width: 100%;
+}
+
+.mat-row .mat-cell {
+  border-bottom: 1px solid #CCDBF0;
+  border-top: 1px solid transparent;
+  text-align: center;
+}
+
+.mat-row:hover{
+  background-color: #CBDAF0;
+  cursor: pointer;
+}
+
+.mat-header-row {
+  background-color: #CBDAF0;
+}
+
+.mat-header-cell {
+  font-weight: 600;
+  color: #021A41;
+  border-bottom: 2px solid #839DC3;
+  text-align: center;
+}
+
+.device-detail {
+  font-weight: bold;
+  color: #314D77;
+}
+
+.mat-table {
+  width: 75%;
+  table-layout: fixed;
+}
+
+.table-container {
+  justify-content: center;
+  overflow-y: auto;
+}

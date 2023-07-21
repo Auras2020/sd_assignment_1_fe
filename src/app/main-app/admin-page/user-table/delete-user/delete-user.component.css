@@ -1,0 +1,22 @@
+.delete-user-dialog-title{
+  color: #FA3F3F;
+}
+
+.mat-dialog-title {
+  border-bottom: 2px solid #FFA6AD
+}
+
+.delete-user-button {
+  background-color: #DC4E2A;
+  border-radius: 0;
+  color: #FFFFFF;
+  width: 125px;
+}
+
+.cancel-button{
+  color: #DC4E2A;
+}
+
+.dialog-content{
+  color: #3E5F8D;
+}

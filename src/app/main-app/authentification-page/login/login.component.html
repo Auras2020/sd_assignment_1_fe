@@ -1,0 +1,46 @@
+<div [formGroup]="form">
+  <h1 mat-dialog-title class="dialog-title">{{title}}</h1>
+
+  <div>
+
+    <div>
+      <div>
+        <label class="username-label">Username</label>
+      </div>
+      <div>
+        <mat-form-field appearance="outline" class="mat-form">
+          <input matInput placeholder="Enter your email" formControlName="email">
+        </mat-form-field>
+        <div
+          *ngIf="usernameControl.touched && usernameControl.hasError('required')" class="error">
+          Username is required!
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div>
+        <label class="password-label">Password</label>
+      </div>
+      <div>
+        <mat-form-field appearance="outline" class="mat-form">
+          <input matInput placeholder="Enter your password" formControlName="password" type="password">
+        </mat-form-field>
+        <div
+          *ngIf="passwordControl.touched && passwordControl.hasError('required')" class="error">
+          Password is required!
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <button [disabled]="!form.valid" mat-raised-button color="primary" (click)="submit()" class="submit-button">Submit</button>
+      <label class="message-style" [hidden]="this.hidden">{{this.message}}</label>
+    </div>
+
+    <div class="register-padding" [hidden]="this.hidden">
+      <a routerLink="register" class="register" (click)="clicked()">Register</a>
+    </div>
+
+  </div>
+</div>

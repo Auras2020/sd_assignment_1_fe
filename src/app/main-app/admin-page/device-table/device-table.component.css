@@ -1,0 +1,99 @@
+.device-table {
+  min-width: 100%;
+}
+
+.mat-row .mat-cell {
+  border-bottom: 1px solid #CCDBF0;
+  border-top: 1px solid transparent;
+  text-align: center;
+}
+
+.mat-header-row {
+  background-color: #CBDAF0;
+}
+
+.mat-header-cell {
+  font-weight: 600;
+  color: #021A41;
+  border-bottom: 2px solid #839DC3;
+  text-align: center;
+}
+
+.device-detail {
+  font-weight: bold;
+  color: #314D77;
+}
+
+.employee-name{
+  width: 150px;
+}
+
+.allocate-button {
+  color: #DC4E2A;
+  border: 2px solid #DC4E2A;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mat-table {
+  width: 75%;
+  table-layout: fixed;
+}
+
+.table-container {
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.add-device-button{
+  background-color: #DC4E2A;
+  color: #FFFFFF;
+  width: 125px;
+  font-weight: bold;
+}
+
+.add-button{
+  justify-content: center;
+  align-content: center;
+  display: flex;
+  padding-bottom: 50px;
+}
+
+.edit-button, .delete-button {
+  color: #DC4E2A;
+}
+
+.edit-column, .delete-column{
+  width: 10%;
+}
+
+.employee {
+  color: #EA542F;
+  font-weight: 700;
+}
+
+.user-name{
+  color: #314D77;
+  display: inline;
+}
+
+.mat-option-style{
+  background-color: white;
+  color: #314D77;
+  font-weight: bold;
+}
+
+.allocate, .deallocate, .reallocate{
+  background-color: white;
+  border-width: 0;
+  display: block;
+}
+
+.allocate:hover, .deallocate:hover, .reallocate:hover{
+  background-color: #CBDAF0;
+}
+
+.options-style{
+  width: 0;
+}
